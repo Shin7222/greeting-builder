@@ -1,11 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Aplikasi Konversi Suhu</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="greetingBuilder.js"></script>
+    <div class="card">
+      <h2>Aplikasi Konversi Suhu</h2>
+
+      <div class="input-group">
+        <label for="suhuInput">Nilai Suhu:</label>
+        <input type="number" id="suhuInput" placeholder="Contoh: 25" />
+      </div>
+
+      <div class="input-group">
+        <label for="skalaAsal">Dari Skala:</label>
+        <select id="skalaAsal">
+          <option value="c">Celsius (°C)</option>
+          <option value="r">Reamur (°Ré)</option>
+          <option value="f">Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="skalaTujuan">Ke Skala Tujuan:</label>
+        <select id="skalaTujuan">
+          <option value="r">Reamur (°Ré)</option>
+          <option value="c">Celsius (°C)</option>
+          <option value="f">Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+      </div>
+
+      <button onclick="hitungKonversi()">Konversi Sekarang</button>
+
+      <div class="result">
+        <h3>Hasil:</h3>
+        <p id="app">Masukkan nilai dan klik tombol di atas.</p>
+      </div>
+    </div>
+
+    <script src="temperatureConvert.js"></script>
   </body>
 </html>
